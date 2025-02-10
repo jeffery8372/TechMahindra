@@ -26,7 +26,7 @@ public class User implements Serializable{
 
     public void borrowBook(Book book) throws MaxBooksAllowedException{
         if (borrowedBooks.size() >= MAX_BOOKS){
-            throw new MaxBooksAllowedException("User " + name + " has reached the borrowing limit.");
+            throw new MaxBooksAllowedException("User " + name + " has reached the limit ");
         }
         borrowedBooks.add(book);
     }
