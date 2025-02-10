@@ -5,10 +5,10 @@ public class Main{
     public static void main(String[] args){
         LibraryManager libManager = new LibraryManager();
 
-        libManager.addBook(new Book("Java Programming", "James", "12345"));
-        libManager.addBook(new Book("Data Structures and Algorithms", "Smith", "67890"));
-        libManager.addUser(new User("Alice", "U00001"));
-        libManager.addUser(new User("Bob", "U00002"));
+        libManager.addBook(new Book("Python Programming", "Charles", "17345"));
+        libManager.addBook(new Book("DSA", "Steve", "67830"));
+        libManager.addUser(new User("Arun", "U00005"));
+        libManager.addUser(new User("Bobby", "U00005"));
         //libManager.borrowBook("sssssa", "sdssddddsa");
 
         ExecutorService executor = Executors.newFixedThreadPool(2);
