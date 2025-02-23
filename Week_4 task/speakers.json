@@ -1,0 +1,33 @@
+[
+    {
+      "name": "Elon Musk",
+      "role": "Founder",
+      "company": "xAI, Tesla, SpaceX",
+      "image": "elon.png"
+    },
+    {
+      "name": "Serena Williams",
+      "role": "Tennis Player",
+      "company": "",
+      "image": "serena.png"
+    },
+    {
+      "name": "Marques Brownlee",
+      "role": "YouTuber & Podcaster",
+      "company": "",
+      "image": "marcus.png"
+    },
+    {
+      "name": "Melanie Perkins",
+      "role": "Co-founder & CEO",
+      "company": "Canva",
+      "image": "melaine.png"
+    },
+    {
+      "name": "Sam Altman",
+      "role": "CEO",
+      "company": "OpenAI",
+      "image": "sam.png"
+    }
+  ]
+  

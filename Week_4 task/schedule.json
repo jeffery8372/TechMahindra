@@ -1,0 +1,33 @@
+[
+    {
+      "date": "Friday, February 28 • 6:30 AM",
+      "track": "AI",
+      "title": "The Future of AI",
+      "description": "Exploring cutting-edge AI breakthroughs and their impact."
+    },
+    {
+      "date": "Friday, February 28 • 9:00 AM",
+      "track": "Cloud",
+      "title": "Cloud Computing Trends",
+      "description": "How cloud services are transforming businesses globally."
+    },
+    {
+      "date": "Thursday, March 6 • 12:30 AM",
+      "track": "Cybersecurity",
+      "title": "Cybersecurity Essentials",
+      "description": "Protecting data in an increasingly connected world."
+    },
+    {
+      "date": "Sunday, March 9 • 12:30 AM",
+      "track": "AI",
+      "title": "AI Ethics Panel",
+      "description": "Discussing the moral and ethical implications of AI."
+    },
+    {
+      "date": "Monday, March 25 • 3:00 PM",
+      "track": "Cloud",
+      "title": "Scaling Your Startup in the Cloud",
+      "description": "Best practices for deploying cloud solutions at scale."
+    }
+  ]
+  

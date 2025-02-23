@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InnovateX - Tech Conference</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="logo">InnovateX</div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#schedule">Schedule</a></li>
+                <li><a href="#speakers">Speakers</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <!-- POP UP SECTION -->
+
+    <div class="popup" id="countdownPopup">
+        <div class="popup-content">
+            <div>Save 1000₹. Our 2 for 1 sale starts in </div>
+            <div class="countdown" id="countdown">
+                <div><span id="days">00</span><small>Days</small></div>
+                <div><span id="hours">00</span><small>Hours</small></div>
+                <div><span id="minutes">00</span><small>Minutes</small></div>
+                <div><span id="seconds">00</span><small>Seconds</small></div>
+            </div>
+            <button class="register-button">Pre-register</button>
+        </div>
+        <button class="close-button" id="closePopup">X</button>
+    </div>
+
+
+    <!-- HERO SECTION -->
+
+    <section class="hero">
+        <video autoplay loop muted playsinline>
+            <source src="confVideo.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+        </video>
+        <!-- <div class="hero-content">
+            <h1>Welcome to InnovateX</h1>
+            <p>The Premier Tech Conference</p>
+            <button class="cta">Get Tickets</button>
+        </div> -->
+    </section> 
+    
+
+    <!-- HOME SECTION -->
+
+    <section id="home" class="hero">
+        <h1>InnovateX: Shaping the Future of Technology</h1>
+        <p>Join the Innovation Revolution at InnovateX. Explore the latest trends in AI, cybersecurity, cloud computing, and more.</p>
+        <button class="cta primary-cta">Register Now</button>
+        <button class="cta secondary-cta">View Schedule</button>
+    
+        <div id="countdown-timer">
+            </div>
+    </section>
+    
+
+    <!-- ABOUT SECTION -->
+
+    <section id="about" class="about">
+        <h2>ABOUT INNOVATEX</h2>
+        <p>InnovateX is where the future of technology unfolds. We're an annual gathering of tech leaders, innovators, and enthusiasts, all driven by a passion for what's next.</p>
+    
+        <p>Our goal is simple: to inspire and empower. We provide a platform for learning, networking, and exploring the cutting-edge of AI, cybersecurity, and cloud computing.</p>
+    
+        <p>Join us to experience:</p>
+        <ul>
+            <li>Insightful talks from industry pioneers.</li>
+            <li>Hands-on workshops to boost your skills.</li>
+            <li>Unparalleled networking opportunities.</li>
+        </ul>
+    
+        <p>InnovateX is more than a conference; it's a launchpad for your next big idea. Be part of the innovation revolution.</p>
+    </section>
+    
+
+    <!-- SCHEDULE SECTION -->
+
+    <section id="schedule" class="schedule">
+        <h2>Event Schedule</h2>
+        
+        <!-- (Optional) Keep or remove your date-cards. 
+             We'll show dynamic track-based sessions below. -->
+        
+        <!-- TRACK FILTER DROPDOWN -->
+        <label for="trackFilter" style="color:white;">Filter by Track:</label>
+        <select id="trackFilter">
+            <option value="all">All Tracks</option>
+            <option value="AI">AI</option>
+            <option value="Cloud">Cloud</option>
+            <option value="Cybersecurity">Cybersecurity</option>
+        </select>
+        
+        <!-- DYNAMIC SCHEDULE CONTAINER -->
+        <div id="dynamicScheduleContainer" style="margin-top: 30px;"></div>
+    </section>
+    
+    
+    <!-- SPEAKERS SECTION -->
+
+    <section id="speakers" class="speakers">
+        <h2>They've Spoken</h2>
+        <div class="speakers-container">
+            <!-- We will REMOVE or COMMENT OUT the existing static speaker cards. -->
+            <!-- <div class="speaker-card"> ... </div> -->
+        </div>
+    </section>
+    
+
+    <!-- CONTACT US SECTION -->
+
+    <section id="contact" class="contact">
+        <h2>Contact Us</h2>
+        <form id="contact-form">
+            <input type="text" id="name" placeholder="Your Name" required>
+            <input type="email" id="email" placeholder="Your Email" required>
+            <textarea id="message" placeholder="Your Message" required></textarea>
+            <button type="submit">Send</button>
+        </form>
+    </section>
+   
+    
+    <footer>
+        <p>&copy; 2025 InnovateX. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>

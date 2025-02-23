@@ -1,0 +1,597 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #0a0a0a;
+    color: white;
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 40px;
+    background: rgba(0, 0, 0, 0.9);
+    backdrop-filter: blur(10px);
+    box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 36px;
+    font-weight: bold;
+    background: linear-gradient(45deg, #ff6600, #ff2d55);
+    -webkit-background-clip: text;
+    color: transparent;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+nav ul {
+    text-align: center;
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #ff6600;
+}
+
+/* Hero Section */
+/* Hero Section with Full-Screen Video */
+/* Hero Section with Full-Screen Video */
+/* Hero Section */
+.hero {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Vertically center content */
+    text-align: left; /* Align text to the left */
+    overflow: hidden;
+    padding: 0 50px; /* Add horizontal padding */
+    box-sizing: border-box; /* Include padding in width and height */
+}
+
+/* Background Video */
+.hero video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    filter: brightness(50%);
+}
+
+/* Heading Styles */
+.hero h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 20px; /* Increase spacing below headline */
+    text-transform: uppercase;
+    z-index: 1;
+    line-height: 1.2; /* Adjust line height */
+}
+
+/* Paragraph Styles */
+.hero p {
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin-bottom: 30px; /* Increase spacing below paragraph */
+    line-height: 1.6;
+    z-index: 1;
+}
+
+/* Button Styles */
+.cta {
+    display: inline-block;
+    font-size: 1rem;
+    padding: 12px 25px; /* Increase button padding */
+    margin-right: 15px; /* Add spacing between buttons */
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    text-transform: uppercase;
+    z-index: 1;
+}
+
+/* Primary Button */
+.primary-cta {
+    background-color: #ff6600; /* Orange */
+    color: white;
+    box-shadow: 0 4px 10px rgba(255, 102, 0, 0.3); /* Orange shadow */
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.primary-cta:hover {
+    background-color: #ff4500; /* Darker orange on hover */
+    box-shadow: 0 6px 15px rgba(255, 69, 0, 0.5); /* Stronger orange shadow */
+}
+
+/* Secondary Button */
+.secondary-cta {
+    background-color: transparent;
+    border: 2px solid white;
+    color: white;
+}
+
+.secondary-cta:hover {
+    background-color: white;
+    color: #16213e;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero {
+        padding: 0 20px; /* Adjust padding for smaller screens */
+        text-align: center; /* Center text on smaller screens */
+    }
+
+    .hero h1 {
+        font-size: 2.5rem; /* Adjust headline size */
+    }
+
+    .hero p {
+        font-size: 1rem; /* Adjust paragraph size */
+    }
+
+    .cta {
+        display: block; /* Stack buttons vertically */
+        width: 100%; /* Make buttons full width */
+        margin: 10px 0; /* Add vertical spacing */
+    }
+}
+/* About Section */
+.about {
+    background: #111;
+    padding: 80px 20px;
+    text-align: center;
+    color: #eee;
+    margin: 50px auto;
+    max-width: 800px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s ease; /* Add transition for hover effect */
+}
+
+.about:hover {
+    transform: translateY(-5px); /* Subtle lift on hover */
+}
+
+.about h2 {
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    background: linear-gradient(45deg, #ff6600, #ff2d55); /* Apply the gradient */
+    -webkit-background-clip: text; /* Clip the background to the text */
+    color: transparent; /* Make the text transparent to show the gradient */
+    display: inline-block; /* Required for background-clip */
+}
+
+.about p {
+    font-size: 1.1em;
+    line-height: 1.8;
+    max-width: 700px;
+    margin: 0 auto 30px;
+    color: #bbb;
+    animation: fadeInUp 1s ease-out; /* Fade in animation */
+}
+
+.about ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px auto 30px;
+    max-width: 600px;
+    text-align: left;
+}
+
+.about ul li {
+    font-size: 1em;
+    line-height: 1.8;
+    color: #ccc;
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 10px;
+    transition: background-color 0.3s ease; /* Add transition for hover effect */
+}
+
+.about ul li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #ff6600;
+}
+
+.about ul li:hover {
+    background-color: #1a1a1a; /* Darker background on hover */
+    transform: translateX(5px); /* Subtle shift on hover */
+}
+/* Add styles for expanded list items */
+.about ul li.expanded {
+    background-color: #222; /* Darker background when expanded */
+    padding: 20px;
+    cursor: default; /* Change cursor to default */
+}
+
+/* Add styles for animations triggered by JavaScript */
+.about.active h2 {
+    animation: fadeInDown 1s ease-out forwards; 
+}
+
+.about.active p {
+    animation: fadeInUp 1s ease-out forwards;
+}
+/* Animations */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .about {
+        padding: 60px 15px;
+    }
+
+    .about h2 {
+        font-size: 2em;
+    }
+
+    .about p,
+    .about ul li {
+        font-size: 1em;
+    }
+}
+/* Schedule Section */
+.schedule {
+    background: #111;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(255, 255, 255, 0.2);
+    max-width: 750px;
+    width: 90%;
+    margin: 50px auto;
+    text-align: center;
+}
+
+/* Title */
+h2 {
+    font-size: 24px;
+    color: #fff;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+/* Selected Date */
+.selected-date {
+    font-size: 16px;
+    color: #bbb;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.calendar-icon {
+    margin-right: 8px;
+    color: #ff6600;
+}
+
+/* Grid Layout */
+.schedule-grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* Date Cards */
+.date-card {
+    background: #222;
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.3s ease;
+    width: 140px;
+    border: 2px solid transparent;
+    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.1);
+}
+
+.date-card:hover {
+    background: #333;
+    transform: scale(1.05);
+}
+
+/* Active State */
+.date-card.active {
+    border: 2px solid #ff6600;
+    background: #1a1a1a;
+    transform: scale(1.1);
+}
+
+/* Date Circle */
+.date-circle {
+    width: 50px;
+    height: 50px;
+    background: #ff6600;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin: 12px auto;
+    transition: 0.3s;
+}
+
+/* Text Styles */
+.day {
+    font-size: 16px;
+    font-weight: bold;
+    color: #eee;
+}
+
+.month {
+    font-size: 14px;
+    color: #ccc;
+}
+
+.time {
+    font-size: 14px;
+    color: #bbb;
+}
+/* Speakers Section */
+.speakers-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    justify-items: center;
+    padding: 50px;
+}
+
+.speaker-card {
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    width: 250px;
+    backdrop-filter: blur(10px);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0px 4px 15px rgba(255, 255, 255, 0.1);
+}
+
+.speaker-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 10px 30px rgba(255, 102, 0, 0.3);
+}
+
+.speaker-card img {
+    width: 100%;
+    border-radius: 15px;
+    margin-bottom: 15px;
+}
+
+.speaker-card h3 {
+    margin: 10px 0 5px;
+    font-size: 20px;
+    color: #ff6600;
+}
+
+.speaker-card p {
+    margin: 5px 0;
+    font-size: 14px;
+    color: #bbb;
+}
+
+/* Sections */
+section {
+    padding: 70px 20px;
+    text-align: center;
+}
+
+/* contact us */
+/* Contact Section Styling */
+.contact {
+    background: linear-gradient(45deg, #ff6600, #ff2d55); /* Gradient Background */
+    padding: 50px 20px;
+    text-align: center;
+    color: white;
+}
+
+.contact h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+/* Contact Form Styling */
+#contact-form {
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#contact-form input,
+#contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+}
+
+#contact-form input {
+    background: rgba(255, 255, 255, 0.9);
+}
+
+#contact-form textarea {
+    background: rgba(255, 255, 255, 0.9);
+    min-height: 120px;
+    resize: none;
+}
+
+/* Submit Button */
+#contact-form button {
+    background: white;
+    color: #ff2d55;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    padding: 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+#contact-form button:hover {
+    background: #ff2d55;
+    color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .contact {
+        padding: 40px 15px;
+    }
+
+    .contact h2 {
+        font-size: 28px;
+    }
+
+    #contact-form {
+        width: 90%;
+    }
+}
+
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.9);
+    color: white;
+    font-size: 14px;
+    box-shadow: 0px -4px 10px rgba(255, 255, 255, 0.1);
+}
+
+/* style.css */
+.popup {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: linear-gradient(45deg, #ff6600, #ff2d55); /* Matching gradient */
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    font-weight: bold;
+}
+
+
+.popup-content {
+    display: flex;
+    align-items: center;
+}
+
+.countdown {
+    display: flex;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.countdown div {
+    margin: 0 5px;
+    text-align: center;
+}
+
+.countdown div span {
+    display: block;
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.countdown div small {
+    display: block;
+    font-size: 0.8em;
+}
+
+.register-button {
+    background-color: transparent; /* No solid background */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    font-weight: bold;
+
+    color: white; /* Text color follows gradient */
+}
+
+.register-button::before {
+    content: '➤'; /* Unicode for right arrow */
+    margin-right: 5px;
+    color: white;
+}
+
+.close-button {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5em;
+    cursor: pointer;
+}
