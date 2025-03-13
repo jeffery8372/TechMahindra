@@ -1,0 +1,80 @@
+<div class="container mt-4">
+  <!-- Filter Section -->
+  <div class="row mb-4">
+    <div class="col-md-6">
+      <label for="maxPrice" class="form-label fw-bold">Max Price (₹):</label>
+      <input
+        type="number"
+        class="form-control"
+        id="maxPrice"
+        [(ngModel)]="maxPrice"
+        placeholder="Enter max price"
+      />
+    </div>
+    <div class="col-md-6">
+      <label for="companyFilter" class="form-label fw-bold"
+        >Filter by Company:</label
+      >
+      <select
+        class="form-select"
+        id="companyFilter"
+        [(ngModel)]="selectedCompany"
+      >
+        <option value="All">All</option>
+        <option *ngFor="let company of uniqueCompanies" [value]="company">
+          {{ company }}
+        </option>
+      </select>
+    </div>
+  </div>
+
+  <!-- Success Message -->
+  <div *ngIf="successMessage" class="alert alert-success text-center fade show">
+    {{ successMessage }}
+  </div>
+
+  <!-- Bikes Listing -->
+  <div class="row">
+    <div
+      class="col-lg-6 col-md-12"
+      *ngFor="
+        let bike of bikes
+          | priceFilter : maxPrice
+          | companyFilter : selectedCompany
+      "
+    >
+      <div class="card mb-4 shadow-sm border-0">
+        <div class="row g-0 align-items-center">
+          <!-- Left: Bike Image -->
+          <div class="col-md-4">
+            <img
+              [src]="bike.image"
+              class="img-fluid rounded-start w-100"
+              alt="{{ bike.name }}"
+              style="object-fit: cover; height: 100%"
+            />
+          </div>
+
+          <!-- Right: Bike Details -->
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title text-dark fw-bold">{{ bike.name }}</h5>
+              <p class="card-text text-muted small">
+                <strong>Company:</strong> {{ bike.company }}
+              </p>
+              <p class="card-text text-muted small">{{ bike.description }}</p>
+              <h6 class="text-success fw-bold">₹{{ bike.price | number }}</h6>
+
+              <button
+                class="btn btn-success mt-2 w-100"
+                (click)="addToCart(bike)"
+              >
+                Pre-Order
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

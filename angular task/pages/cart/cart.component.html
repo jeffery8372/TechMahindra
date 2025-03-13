@@ -1,0 +1,93 @@
+<div class="container mt-4">
+  <h2 class="text-center">Your Cart</h2>
+
+  <!-- Cart List -->
+  <div *ngIf="cartItems.length > 0; else emptyCart">
+    <table class="table table-bordered">
+      <thead class="thead-dark">
+        <tr>
+          <th>Select</th>
+          <th>Bike/Accessories</th>
+          <th>Price</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let bike of cartItems">
+          <td>
+            <input
+              type="checkbox"
+              [(ngModel)]="selectedItems[bike.id]"
+              (change)="calculateTotal()"
+            />
+          </td>
+          <td>{{ bike.name }}</td>
+          <td>₹{{ bike.price | number }}</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h4 class="text-end">Total: ₹{{ totalAmount | number }}</h4>
+    <button class="btn btn-primary w-100 mt-2" (click)="openOrderForm()">
+      🛍 Order Now
+    </button>
+  </div>
+
+  <!-- Empty Cart Message -->
+  <ng-template #emptyCart>
+    <p class="text-center text-muted">Your cart is empty.</p>
+  </ng-template>
+
+  <!-- Order Form -->
+  <div *ngIf="showOrderForm" class="mt-4">
+    <h3 class="text-center">Enter Your Details</h3>
+
+    <form (ngSubmit)="submitOrder()">
+      <div class="mb-3">
+        <label class="form-label">Full Name</label>
+        <input
+          type="text"
+          class="form-control"
+          [(ngModel)]="orderDetails.name"
+          name="name"
+          required
+        />
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label">Phone Number</label>
+        <input
+          type="text"
+          class="form-control"
+          [(ngModel)]="orderDetails.phone"
+          name="phone"
+          required
+        />
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label">Email</label>
+        <input
+          type="email"
+          class="form-control"
+          [(ngModel)]="orderDetails.email"
+          name="email"
+          required
+        />
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label">Address</label>
+        <textarea
+          class="form-control"
+          [(ngModel)]="orderDetails.address"
+          name="address"
+          required
+        ></textarea>
+      </div>
+
+      <button type="submit" class="btn btn-success w-100">
+        📦 Place Order
+      </button>
+    </form>
+  </div>
+</div>

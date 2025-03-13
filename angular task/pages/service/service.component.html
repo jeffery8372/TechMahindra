@@ -1,0 +1,73 @@
+<div class="container mt-4">
+  <!-- Filter Section -->
+  <div class="row mb-4 justify-content-center">
+    <div class="col-md-4">
+      <label
+        for="categoryFilter"
+        class="form-label fw-bold text-center d-block"
+      >
+        Filter by Category:
+      </label>
+      <select
+        class="form-select text-center"
+        id="categoryFilter"
+        [(ngModel)]="selectedCategory"
+      >
+        <option value="All">All</option>
+        <option *ngFor="let category of uniqueCategories" [value]="category">
+          {{ category }}
+        </option>
+      </select>
+    </div>
+  </div>
+
+  <!-- Success Message -->
+  <div *ngIf="successMessage" class="alert alert-success text-center fade show">
+    {{ successMessage }}
+  </div>
+
+  <!-- Accessories Listing -->
+  <div class="row">
+    <div
+      class="col-lg-4 col-md-6"
+      *ngFor="let accessory of accessories"
+      [hidden]="
+        selectedCategory !== 'All' && accessory.category !== selectedCategory
+      "
+    >
+      <div class="card mb-4 shadow-sm border-0">
+        <div class="row g-0 align-items-center">
+          <!-- Left: Accessory Image -->
+          <div class="col-md-5">
+            <img
+              [src]="accessory.imageUrl"
+              class="img-fluid rounded-start w-100"
+              alt="{{ accessory.name }}"
+              style="object-fit: cover; height: 200px; width: 100%"
+            />
+          </div>
+
+          <!-- Right: Accessory Details -->
+          <div class="col-md-7">
+            <div class="card-body">
+              <h5 class="card-title text-dark fw-bold">{{ accessory.name }}</h5>
+              <p class="card-text text-muted small">
+                <strong>Category:</strong> {{ accessory.category }}
+              </p>
+              <h6 class="text-success fw-bold">
+                ₹{{ accessory.price | number }}
+              </h6>
+
+              <button
+                class="btn btn-primary mt-2 w-100"
+                (click)="addToCart(accessory)"
+              >
+                Add to Cart
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
