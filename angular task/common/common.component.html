@@ -1,0 +1,77 @@
+<style>
+  /* Dark Green Gradient Background */
+  .navbar-gradient {
+    background: linear-gradient(135deg, #004d00, #006600, #008000);
+  }
+
+  /* Navbar Link Styling */
+  .navbar-nav .nav-link {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: white !important;
+    transition: color 0.3s ease, transform 0.2s ease;
+  }
+
+  /* Hover Effects */
+  .navbar-nav .nav-link:hover {
+    color: #ffcc00 !important;
+    transform: scale(1.1);
+  }
+
+  /* Navbar Brand Styling */
+  .navbar-brand {
+    font-size: 1.4rem;
+    font-weight: bold;
+  }
+
+  /* Toggler Icon Styling */
+  .navbar-toggler {
+    border: none;
+  }
+
+  .navbar-toggler:focus {
+    outline: none;
+    box-shadow: none;
+  }
+</style>
+
+<nav class="navbar navbar-expand-lg navbar-dark navbar-gradient">
+  <div class="container">
+    <a class="navbar-brand" routerLink="/">Apex Riders</a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNav"
+      aria-controls="navbarNav"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link active" routerLink="/"> Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/buy"> Bikes</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/service">Accessories</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/cart">Cart</a>
+        </li>
+        <li class="nav-item" *ngIf="status">
+          <a class="nav-link" routerLink="/orders">Orders</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" (click)="loginHandler()">{{ loginmenu }}</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
